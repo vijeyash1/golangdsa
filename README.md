@@ -1,2 +1,2 @@
 # golangdsa
-git add . && git commit -m "initial commit" && git push
+git add . && git commit -m "added palindrome and two sum" && git push
