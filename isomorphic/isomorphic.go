@@ -27,3 +27,23 @@ func FindIsomorphic(word, target string) {
 	}
 	fmt.Println("Its isomorphic")
 }
+
+func isIsomorphic(s string, t string) bool {
+	if len(s) != len(t) {
+		return false
+	}
+	target := []rune(t)
+	find := make(map[rune]rune)
+	for i, ch := range s {
+		if _, ok := find[ch]; ok {
+			if find[ch] != target[i] {
+				return false
+			}
+		} else {
+			find[ch] = target[i]
+			continue
+		}
+
+	}
+	return true
+}
