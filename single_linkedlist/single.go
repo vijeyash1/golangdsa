@@ -34,7 +34,7 @@ func (l *LinkedList) Display() {
 		return
 	}
 	fmt.Print("Linked list: ")
-	for current.next != nil {
+	for current != nil {
 		fmt.Printf("%d ", current.data)
 		current = current.next
 	}
