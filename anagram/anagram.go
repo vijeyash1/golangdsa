@@ -15,12 +15,11 @@ func FindAnagram(word, target string) {
 	}
 	for _, w := range target {
 		t[w]--
-	}
-	for _, b := range t {
-		if b != 0 {
+		if t[w] < 0 {
 			fmt.Println("its not a anagram")
 			return
 		}
 	}
+
 	fmt.Println("its a anagram")
 }
