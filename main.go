@@ -1,7 +1,7 @@
 package main
 
-import "dsa/pangram"
+import "dsa/anagram"
 
 func main() {
-	pangram.FindPangram("thequickbrownfoxjumpsoveralazydog")
+	anagram.FindAnagram("rat", "ant")
 }
