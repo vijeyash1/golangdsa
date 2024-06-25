@@ -49,3 +49,25 @@ func ArrayToLinked(list []int) {
 	}
 	new.PrintForward()
 }
+func PrintLinkedList(head *Node) {
+	currentNode := head
+	for currentNode != nil {
+		fmt.Printf("%d ", currentNode.data)
+		currentNode = currentNode.next
+	}
+	fmt.Println()
+}
+func SimpleMethod(list []int) *Node {
+	var head, tail *Node
+	for _, d := range list {
+		newNode := &Node{data: d}
+		if head == nil {
+			head = newNode
+			tail = newNode
+		} else {
+			tail.next = newNode
+			tail = newNode
+		}
+	}
+	return head
+}
