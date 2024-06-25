@@ -1,4 +1,2 @@
 # golangdsa
-git add . &&
-git commit -m "added two sum for two arrays" &&
-git push
+git add . && git commit -m "commit message" && git push
