@@ -43,6 +43,7 @@ func TwoSumForTwoArray(arr1, arr2 []int, target int) {
 			if arr1[i]+arr2[j] == target {
 				found = true
 				fmt.Printf("the array 1 has index value of %v at %v and array 2 has index value of %v at %v and both adds up to target value %v", i, arr1[i], j, arr2[j], arr1[i]+arr2[j])
+				return
 			}
 		}
 	}

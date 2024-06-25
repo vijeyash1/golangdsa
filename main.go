@@ -1,7 +1,7 @@
 package main
 
-import "dsa/isomorphic"
+import "dsa/jewels"
 
 func main() {
-	isomorphic.FindIsomorphic("ann", "cnn")
+	jewels.FindJewels("aA", "aAAbncdf")
 }
