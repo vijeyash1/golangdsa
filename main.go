@@ -3,5 +3,5 @@ package main
 import "dsa/isomorphic"
 
 func main() {
-	isomorphic.FindIsomorphic("ann", "cbv")
+	isomorphic.FindIsomorphic("ann", "cnn")
 }

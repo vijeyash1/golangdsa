@@ -14,14 +14,14 @@ func FindIsomorphic(word, target string) {
 	t := []rune(target)
 	find := make(map[rune]rune)
 	for i, ch := range word {
-		if _, ok := find[ch]; !ok {
-			find[ch] = t[i]
-			continue
-		} else {
+		if _, ok := find[ch]; ok {
 			if find[ch] != t[i] {
 				fmt.Println("Its not isomorphic")
 				return
 			}
+		} else {
+			find[ch] = t[i]
+			continue
 		}
 
 	}
