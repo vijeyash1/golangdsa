@@ -1,7 +1,7 @@
 package main
 
-import "dsa/fruits"
+import "dsa/pangram"
 
 func main() {
-	fruits.FindFruit()
+	pangram.FindPangram("thequickbrownfoxjumpsoveralazydog")
 }
