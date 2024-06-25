@@ -1,7 +1,7 @@
 package main
 
-import "dsa/anagram"
+import "dsa/isomorphic"
 
 func main() {
-	anagram.FindAnagram("nat", "ant")
+	isomorphic.FindIsomorphic("ann", "cbv")
 }
