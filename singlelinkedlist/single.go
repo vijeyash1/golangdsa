@@ -125,3 +125,51 @@ Linked list: 5 6 8
 Linked list: 6 8
 
 */
+
+func (l *LinkedList) InsertDataAfterValue(data int, value int) {
+	newNode := &Node{
+		data: data,
+	}
+	if l.head == nil {
+		l.head = newNode
+		return
+	}
+
+	current := l.head
+
+	for current.next != nil {
+		if current.next.data == value {
+			newNode.next = current.next.next
+			current.next.next = newNode
+			return
+		}
+		current = current.next
+	}
+}
+
+func (l *LinkedList) InsertDataBeforeValue(data int, value int) {
+	newNode := &Node{
+		data: data,
+	}
+	if l.head == nil {
+		l.head = newNode
+		return
+	}
+
+	current := l.head
+
+	if current.data == value {
+		newNode.next = current
+		l.head = newNode
+		return
+	}
+
+	for current.next != nil {
+		if current.next.data == value {
+			newNode.next = current.next
+			current.next = newNode
+			return
+		}
+		current = current.next
+	}
+}

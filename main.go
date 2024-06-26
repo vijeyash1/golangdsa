@@ -7,17 +7,16 @@ func main() {
 
 	list.InsertData(5)
 	list.InsertData(6)
-	list.InsertData(7)
 	list.InsertData(8)
 
-	list.Display()
+	list.Display() // 5,6,8
 
-	list.DeleteNodeWithValue(7)
+	list.InsertDataAfterValue(7, 6)
 
+	list.Display()                   //5,6,7,8
+	list.InsertDataBeforeValue(4, 5) //4,5,6,7,8
 	list.Display()
-	list.DeleteNodeWithValue(7)
-	list.Display()
-	list.DeleteNodeWithValue(5)
-	list.Display()
+	list.InsertDataBeforeValue(4, 8)
+	list.Display() // 4,5,6,7,4,8
 
 }
