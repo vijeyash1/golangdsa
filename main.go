@@ -1,22 +1,20 @@
 package main
 
-import "dsa/singlelinkedlist"
+import "dsa/circularlinkedlist"
 
 func main() {
-	list := singlelinkedlist.LinkedList{}
+	list := circularlinkedlist.CircularLinkedList{}
 
-	list.InsertData(5)
-	list.InsertData(6)
-	list.InsertData(8)
+	list.AddData(5)
+	list.AddData(6)
+	list.AddData(8)
+	list.AddData(9)
+	list.AddData(10)
 
-	list.Display() // 5,6,8
-
-	list.InsertDataAfterValue(7, 6)
-
-	list.Display()                   //5,6,7,8
-	list.InsertDataBeforeValue(4, 5) //4,5,6,7,8
 	list.Display()
-	list.InsertDataBeforeValue(4, 8)
-	list.Display() // 4,5,6,7,4,8
+
+	list.DeleteData(9)
+
+	list.Display()
 
 }
