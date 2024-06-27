@@ -59,3 +59,12 @@ func (s *Stack) Pop() {
 		s.top = s.top.next
 	}
 }
+
+func (s *Stack) Peek() int {
+	if s.Isempty() {
+		fmt.Println("Nothing to peek")
+		return 0
+	} else {
+		return s.top.next.value
+	}
+}
