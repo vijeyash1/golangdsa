@@ -22,12 +22,12 @@ func (s *Stack) Isempty() bool {
 func (s *Stack) Push(value int) {
 	newStack := &StackNode{
 		value: value,
+		next:  s.top,
 	}
 	if s.Isempty() {
 		s.top = newStack
 		return
 	} else {
-		newStack.next = s.top
 		s.top = newStack
 	}
 }
@@ -56,7 +56,6 @@ func (s *Stack) Pop() {
 		fmt.Println("Nothing to pop")
 		return
 	} else {
-		current := s.top
-		s.top = current.next
+		s.top = s.top.next
 	}
 }
