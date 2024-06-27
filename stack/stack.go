@@ -46,3 +46,13 @@ func (s *Stack) Traverse() {
 		}
 	}
 }
+
+func (s *Stack) Pop() {
+	if s.Isempty() {
+		fmt.Println("Nothing to pop")
+		return
+	} else {
+		current := s.top
+		s.top = current.next
+	}
+}
