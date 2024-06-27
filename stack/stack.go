@@ -68,3 +68,9 @@ func (s *Stack) Peek() int {
 		return s.top.next.value
 	}
 }
+
+func (s *Stack) Constructor() *Stack {
+	return &Stack{
+		top: nil,
+	}
+}
