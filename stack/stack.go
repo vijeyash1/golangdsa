@@ -17,6 +17,8 @@ type Stack struct {
 func (s *Stack) Isempty() bool {
 	return s.top == nil
 }
+
+// Push to add member to top of the stack
 func (s *Stack) Push(value int) {
 	newStack := &StackNode{
 		value: value,
@@ -30,6 +32,7 @@ func (s *Stack) Push(value int) {
 	}
 }
 
+// Traverse to disaply all the stack members
 func (s *Stack) Traverse() {
 
 	if s.Isempty() {
@@ -47,6 +50,7 @@ func (s *Stack) Traverse() {
 	}
 }
 
+// Pop to remove the member at the top
 func (s *Stack) Pop() {
 	if s.Isempty() {
 		fmt.Println("Nothing to pop")
